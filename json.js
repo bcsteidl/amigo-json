@@ -1,5 +1,5 @@
 (function($) {
 
-    $.fn.json = require('../amigo-json')
+    $.fn.json = require('.')
 
 })(jQuery);

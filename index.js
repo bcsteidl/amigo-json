@@ -1,7 +1,7 @@
 'use strict'
 
 // Define a globalização que o AMIGO vai usar
-const Gbl = require('lib/amigo-funcoes').globalize("pt")
+const Gbl = require('amigo-funcoes').globalize("pt")
 
 module.exports = function(json) {
     var retorno = false;

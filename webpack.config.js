@@ -34,7 +34,6 @@ module.exports = {
     resolve: {
         extensions: [".webpack.js", ".web.js", ".js", ".css"],
         alias: {
-            lib: caminho("lib"),
             css: caminho("css"),
             src: caminho("src")
         }

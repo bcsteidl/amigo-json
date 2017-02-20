@@ -1,6 +1,6 @@
 {
   "name": "amigo-json",
-  "version": "2.5.0",
+  "version": "2.5.1",
   "description": "Plugin de formatação de dados em html para formato json. Podendo ser utilizado em NODEJS ou como plugin para desenvolvimento de frontend em javascript com JQuery",
   "main": "index.js",
   "scripts": {

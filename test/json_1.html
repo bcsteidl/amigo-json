@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<!--<html lang="pt-br" class='no-js' manifest='amigo.manifest'>-->
+<html lang="pt-br">
+
+<head>
+    <meta charset='UTF-8'>
+    <title>Teste de JSON</title>
+
+    <script src='../node_modules/jquery/dist/jquery.min.js'></script>
+    <script src='../node_modules/jquery-ui-dist/jquery-ui.min.js'></script>
+
+    <script src="../node_modules/cldrjs/dist/cldr.js"></script>
+    <script src="../node_modules/cldrjs/dist/cldr/event.js"></script>
+    <script src="../node_modules/cldrjs/dist/cldr/supplemental.js"></script>
+
+    <script src="../node_modules/globalize/dist/globalize.js"></script>
+    <script src="../node_modules/globalize/dist/globalize/number.js"></script>
+    <script src="../node_modules/globalize/dist/globalize/date.js"></script>
+    <script src="../node_modules/globalize/dist/globalize/plural.js"></script>
+
+    <script src='../dist/amigo-json.js'></script>
+
+</head>
+
+<body>
+
+    <form id="formulario">
+        <div>
+            <label for="nome">Nome:</label><br>
+            <input type="text" name="nome" /><br><br>
+        </div>
+        <div>
+            <label for="sobrenome">Sobrenome:</label><br>
+            <input type="text" name="sobrenome" /><br><br>
+        </div>
+        <div>
+            <label for="observacoes">Observações:</label><br>
+            <textarea name="observacoes"></textarea><br><br>
+        </div>
+
+
+    </form>
+    <div>
+        <button id="mostrar">Mostrar JSON</button>
+    </div>
+
+    <div>
+        <button id="valorPadrao">Valores Padrões</button>
+    </div>
+
+    <script>
+        $("#mostrar").click(function() {
+            alert(JSON.stringify($("#formulario").json()))
+        })
+
+        $("#valorPadrao").click(function() {
+            let valores = {
+                nome: "Zé",
+                sobrenome: "DoBoné",
+                observacoes: "Joga muita sinuca"
+            }
+
+            $("#formulario").json(valores)
+        })
+    </script>
+
+</body>
+
+</html>

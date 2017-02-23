@@ -10319,6 +10319,8 @@ module.exports = {
 "use strict";
 
 
+const $ = __webpack_require__(0)
+
 // Define a globalização que o AMIGO vai usar
 const Gbl = __webpack_require__(1).globalize("pt")
 
@@ -10600,6 +10602,8 @@ module.exports = function(tipo) {
 
 "use strict";
 
+
+const $ = __webpack_require__(0)
 
 module.exports = function(lang) {
     Globalize.load(
@@ -41156,13 +41160,28 @@ var widgetsTooltip = $.ui.tooltip;
 /* 27 */
 /***/ (function(module, exports, __webpack_require__) {
 
-(function($) {
+"use strict";
 
-    $.fn.json = __webpack_require__(2)
 
-})(jQuery);
+const $ = __webpack_require__(0)
+
+$.fn.json = __webpack_require__(2)
+
+$("#mostrar").click(function() {
+    alert(JSON.stringify($("#formulario").json()))
+})
+
+$("#valorPadrao").click(function() {
+    let valores = {
+        nome: "Zé",
+        sobrenome: "DoBoné",
+        observacoes: "Joga muita sinuca"
+    }
+
+    $("#formulario").json(valores)
+})
 
 
 /***/ })
 /******/ ]);
-//# sourceMappingURL=amigo-json.js.map
+//# sourceMappingURL=json_2-bdl.js.map

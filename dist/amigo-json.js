@@ -10319,6 +10319,8 @@ module.exports = {
 "use strict";
 
 
+const $ = __webpack_require__(0)
+
 // Define a globalização que o AMIGO vai usar
 const Gbl = __webpack_require__(1).globalize("pt")
 
@@ -10475,7 +10477,7 @@ module.exports = function(json) {
                 }
                 if ($(this).is("figure")) {
                     var url = $(this).find("img").attr("src")
-                    var nome = url.split("/")[url.split("/").length - 1]
+                    var nome = (url ? url.split("/")[url.split("/").length - 1] : "")
                     retorno[$(this).attr("name")] = nome;
                 }
             }
@@ -10600,6 +10602,8 @@ module.exports = function(tipo) {
 
 "use strict";
 
+
+const $ = __webpack_require__(0)
 
 module.exports = function(lang) {
     Globalize.load(

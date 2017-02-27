@@ -1,12 +1,13 @@
 {
     "name": "amigo-json",
-    "version": "2.5.3",
-    "description": "Pacote de formatação de dados em html para formato json, podendo ser utilizado como CommonJS ou plugin na página principal do projeto.",
+    "version": "2.5.4",
+    "description": "Pacote de formatação de dados em HTML para formato JSON, podendo ser utilizado como CommonJS ou plugin na página principal do projeto.",
     "main": "index.js",
     "scripts": {
+        "start": "webpack-dev-server --content-base . --inline",
         "build": "NODE_PRD=FALSE webpack",
         "build-min": "NODE_PRD=TRUE webpack -p",
-        "test": "echo \"Error: no test specified\" && exit 1"
+        "test": "cd test && webpack"
     },
     "author": "Bruno César Steidl",
     "license": "ISC",

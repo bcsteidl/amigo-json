@@ -10477,7 +10477,7 @@ module.exports = function(json) {
                 }
                 if ($(this).is("figure")) {
                     var url = $(this).find("img").attr("src")
-                    var nome = url.split("/")[url.split("/").length - 1]
+                    var nome = (url ? url.split("/")[url.split("/").length - 1] : "")
                     retorno[$(this).attr("name")] = nome;
                 }
             }
